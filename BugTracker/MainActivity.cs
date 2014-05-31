@@ -50,7 +50,8 @@ namespace BugTracker
                     StartActivity(typeof(PreferencesActivity));
                     break;
                 case Resource.Id.addProject:
-                    StartActivity(typeof(AddProjectActivity));
+                    AddProjectForResult(0);
+                    //StartActivity(typeof(AddProjectActivity));
                     break;
                 case Resource.Id.addBug:
                     StartActivity(typeof(AddBugActivity));
@@ -58,6 +59,63 @@ namespace BugTracker
             }
 
             return base.OnOptionsItemSelected(item);
+        }
+
+        public override void OnCreateContextMenu(IContextMenu menu, View v, IContextMenuContextMenuInfo menuInfo)
+        {
+            base.OnCreateContextMenu(menu, v, menuInfo);
+
+            MenuInflater.Inflate(Resource.Menu.contextMenu, menu);
+        }
+
+        public override bool OnContextItemSelected(IMenuItem item)
+        {
+            var info = (AdapterView.AdapterContextMenuInfo)item.MenuInfo;
+            var project = (ProjectModel)ListAdapter.GetItem(info.Position);
+
+            switch (item.ItemId)
+            {
+                case Resource.Id.editProject:
+                    AddProjectForResult(project.Id);
+                    break;
+
+                case Resource.Id.deleteProject:
+                    ProjectRepository.Delete(project.Id);
+                    PopulateList();
+                    break;
+            }
+            
+            return base.OnContextItemSelected(item);
+        }
+
+        private void AddProjectForResult(long id)
+        {
+            var intent = new Intent(this, typeof(AddProjectActivity));
+            intent.PutExtra("project_id", id);
+
+            StartActivityForResult(intent, 0);
+        }
+
+        protected override void OnListItemClick(ListView l, View v, int position, long id)
+        {
+            var selected = (ProjectModel)ListAdapter.GetItem(position);
+
+            // Launch activity to view/edit the currently selected item
+            AddProjectForResult(selected.Id);
+        }
+
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+
+            PopulateList();
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+
+            PopulateList();
         }
     }
 }

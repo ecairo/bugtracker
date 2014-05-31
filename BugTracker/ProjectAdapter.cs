@@ -27,8 +27,8 @@ namespace BugTracker
 
             if (view != null)
             {
-                view.FindViewById<TextView>(Resource.Id.project_name).Text = Left(item.ProjectName, 25);
-                view.FindViewById<TextView>(Resource.Id.project_description).Text = Left(item.ProjectDescription, 30);
+                view.FindViewById<TextView>(Resource.Id.project_name).Text = Left(item.ProjectName, 30);
+                view.FindViewById<TextView>(Resource.Id.project_description).Text = Left(item.ProjectDescription, 70);
 
                 return view;
             }
@@ -40,7 +40,7 @@ namespace BugTracker
             if (text.Length <= length)
                 return text;
 
-            return text.Substring(0, length);
+            return text.Substring(0, length - 3) + "...";
         }
     }
 }

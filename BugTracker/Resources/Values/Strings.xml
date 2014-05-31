@@ -14,6 +14,9 @@
     <string name="addBugTitle">Add Bug</string>
     <string name="projectName">Project Name</string>
     <string name="projectDescription">Project Description</string>
+    <string name="editProject">Edit Project</string>
+    <string name="deleteProject">Delete Project</string>
+    <string name="projectSaved">Project Saved!</string>
 
     <string-array name="Priorities">
       <item>Very High</item>

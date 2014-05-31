@@ -28,14 +28,14 @@ namespace BugTracker.Data
 		{
 			connection.Open();
 
-		    var sql = "CREATE TABLE [Project] ([Id] INTEGER PRIMARY KEY AUTOINCREMENT, [ProjectName] VARCHAR(255) NOT NULL, [ProjectDescription] TEXT)";
+		    var sql = "CREATE TABLE [Projects] ([Id] INTEGER PRIMARY KEY AUTOINCREMENT, [ProjectName] VARCHAR(255) NOT NULL, [ProjectDescription] TEXT)";
 
             using (var cmd = connection.CreateCommand())
             {
                 cmd.CommandText = sql;
                 cmd.ExecuteNonQuery();
 
-                sql = "CREATE TABLE [Bug] ([Id] INTEGER PRIMARY KEY AUTOINCREMENT CONSTRAINT [Project] REFERENCES [Project]([Id]), [FoundBy] VARCHAR(255) NOT NULL," +
+                sql = "CREATE TABLE [Bugs] ([Id] INTEGER PRIMARY KEY AUTOINCREMENT CONSTRAINT [Projects] REFERENCES [Projects]([Id]), [FoundBy] VARCHAR(255) NOT NULL," +
                                "[ExpectedBehavior] TEXT, [ObservedBehavior] TEXT, [Steps2Reproduce] TEXT, [Fixed] BOOLEAN," +
                                "[Found] TIMESTAMP, [Priority] VARCHAR(50), [Assigned2] VARCHAR(255) )";
 
@@ -44,13 +44,13 @@ namespace BugTracker.Data
             }
 
             // Create a sample note to get the user started
-            sql = "INSERT INTO [Project] ([ProjectName], [ProjectDescription]) VALUES (@ProjectName, @ProjectDescription);";
+            sql = "INSERT INTO [Projects] ([ProjectName], [ProjectDescription]) VALUES (@ProjectName, @ProjectDescription);";
 
             using (var cmd = connection.CreateCommand())
             {
                 cmd.CommandText = sql;
                 cmd.Parameters.AddWithValue("@ProjectName", "Sample Project");
-                cmd.Parameters.AddWithValue("@ProjectDescription", "Sample project for traking bugs!");
+                cmd.Parameters.AddWithValue("@ProjectDescription", "Sample project for traking bugs with a long description!!");
 
                 cmd.ExecuteNonQuery();
             }

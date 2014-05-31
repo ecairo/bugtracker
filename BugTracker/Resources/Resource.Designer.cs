@@ -76,11 +76,11 @@ namespace BugTracker
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080019
-			public const int addBug = 2131230745;
+			// aapt resource value: 0x7f08001b
+			public const int addBug = 2131230747;
 			
-			// aapt resource value: 0x7f080018
-			public const int addProject = 2131230744;
+			// aapt resource value: 0x7f08001a
+			public const int addProject = 2131230746;
 			
 			// aapt resource value: 0x7f08000a
 			public const int assigned2 = 2131230730;
@@ -91,8 +91,14 @@ namespace BugTracker
 			// aapt resource value: 0x7f080013
 			public const int bugsList = 2131230739;
 			
-			// aapt resource value: 0x7f08001a
-			public const int editPreferences = 2131230746;
+			// aapt resource value: 0x7f080019
+			public const int deleteProject = 2131230745;
+			
+			// aapt resource value: 0x7f08001c
+			public const int editPreferences = 2131230748;
+			
+			// aapt resource value: 0x7f080018
+			public const int editProject = 2131230744;
 			
 			// aapt resource value: 0x7f080001
 			public const int expectedBehavior = 2131230721;
@@ -199,7 +205,10 @@ namespace BugTracker
 		{
 			
 			// aapt resource value: 0x7f070000
-			public const int optionsMenu = 2131165184;
+			public const int contextMenu = 2131165184;
+			
+			// aapt resource value: 0x7f070001
+			public const int optionsMenu = 2131165185;
 			
 			static Menu()
 			{
@@ -247,6 +256,12 @@ namespace BugTracker
 			// aapt resource value: 0x7f05000a
 			public const int addProjectTitle = 2131034122;
 			
+			// aapt resource value: 0x7f05000f
+			public const int deleteProject = 2131034127;
+			
+			// aapt resource value: 0x7f05000e
+			public const int editProject = 2131034126;
+			
 			// aapt resource value: 0x7f050009
 			public const int editpreferences = 2131034121;
 			
@@ -255,6 +270,9 @@ namespace BugTracker
 			
 			// aapt resource value: 0x7f05000c
 			public const int projectName = 2131034124;
+			
+			// aapt resource value: 0x7f050010
+			public const int projectSaved = 2131034128;
 			
 			static String()
 			{
