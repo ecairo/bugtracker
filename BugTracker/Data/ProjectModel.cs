@@ -13,8 +13,15 @@ using Android.Widget;
 
 namespace BugTracker.Data
 {
-    public class ProjectModel
+    public class ProjectModel: Java.Lang.Object
     {
+
+        public ProjectModel(int id, string projectName, string description)
+        {
+            this.Id = id;
+            this.ProjectName = projectName;
+            this.ProjectDescription = description;
+        }
         public int Id { get; set; }
      
         public string ProjectName { get; set; }

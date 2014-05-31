@@ -8,7 +8,7 @@ namespace BugTracker.Data
 	{
 	    private const string DbFile = "bugTracks.db3";
 
-	    private static SqliteConnection GetConnection()
+	    protected static SqliteConnection GetConnection()
 		{
             var dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), DbFile);
 			var exists = File.Exists(dbPath);

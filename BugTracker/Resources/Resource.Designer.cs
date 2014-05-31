@@ -76,11 +76,11 @@ namespace BugTracker
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080016
-			public const int addBug = 2131230742;
+			// aapt resource value: 0x7f080019
+			public const int addBug = 2131230745;
 			
-			// aapt resource value: 0x7f080015
-			public const int addProject = 2131230741;
+			// aapt resource value: 0x7f080018
+			public const int addProject = 2131230744;
 			
 			// aapt resource value: 0x7f08000a
 			public const int assigned2 = 2131230730;
@@ -91,8 +91,8 @@ namespace BugTracker
 			// aapt resource value: 0x7f080013
 			public const int bugsList = 2131230739;
 			
-			// aapt resource value: 0x7f080017
-			public const int editPreferences = 2131230743;
+			// aapt resource value: 0x7f08001a
+			public const int editPreferences = 2131230746;
 			
 			// aapt resource value: 0x7f080001
 			public const int expectedBehavior = 2131230721;
@@ -133,6 +133,15 @@ namespace BugTracker
 			// aapt resource value: 0x7f08000d
 			public const int projectNameTitle = 2131230733;
 			
+			// aapt resource value: 0x7f080017
+			public const int project_description = 2131230743;
+			
+			// aapt resource value: 0x7f080015
+			public const int project_icon = 2131230741;
+			
+			// aapt resource value: 0x7f080016
+			public const int project_name = 2131230742;
+			
 			// aapt resource value: 0x7f080014
 			public const int projectsList = 2131230740;
 			
@@ -172,6 +181,9 @@ namespace BugTracker
 			
 			// aapt resource value: 0x7f030003
 			public const int Main = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int ProjectListRow = 2130903044;
 			
 			static Layout()
 			{

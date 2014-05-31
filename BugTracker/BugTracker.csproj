@@ -60,6 +60,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Data\DbConfig.cs" />
     <Compile Include="PreferencesActivity.cs" />
+    <Compile Include="ProjectAdapter.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -73,6 +74,9 @@
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\Layout\BugsList.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\ProjectListRow.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>
