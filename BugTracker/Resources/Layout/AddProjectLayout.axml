@@ -2,13 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:padding="5dip">
     <TextView
         android:text="@string/projectName"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/projectNameTitle" />
+        android:id="@+id/projectNameTitle"
+        android:layout_marginTop="10dip" />
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -18,7 +20,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/projectDescriptionTitle" />
+        android:id="@+id/projectDescriptionTitle"
+        android:layout_marginTop="10dip" />
     <EditText
         android:inputType="textMultiLine"
         android:layout_width="fill_parent"

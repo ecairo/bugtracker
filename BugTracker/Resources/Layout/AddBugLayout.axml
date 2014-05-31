@@ -2,13 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:padding="5dip">
     <TextView
         android:text="@string/ExpectedBehavior"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/expectedBehaviorTitle" />
+        android:id="@+id/expectedBehaviorTitle"
+        android:layout_marginTop="10dip" />
     <EditText
         android:inputType="textMultiLine"
         android:layout_width="fill_parent"
@@ -19,7 +21,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/observedBehaviorTitle" />
+        android:id="@+id/observedBehaviorTitle"
+        android:layout_marginTop="10dip" />
     <EditText
         android:inputType="textMultiLine"
         android:layout_width="fill_parent"
@@ -30,7 +33,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/steps2ReproduceTitle" />
+        android:id="@+id/steps2ReproduceTitle"
+        android:layout_marginTop="10dip" />
     <EditText
         android:inputType="textMultiLine"
         android:layout_width="fill_parent"
@@ -40,13 +44,15 @@
         android:text="@string/Fixed"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/fixed" />
+        android:id="@+id/fixed"
+        android:layout_marginTop="10dip" />
     <TextView
         android:text="@string/Priority"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/priorityTitle" />
+        android:id="@+id/priorityTitle"
+        android:layout_marginTop="10dip" />
     <Spinner
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -56,7 +62,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/assigned2Title" />
+        android:id="@+id/assigned2Title"
+        android:layout_marginTop="10dip" />
     <Spinner
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
