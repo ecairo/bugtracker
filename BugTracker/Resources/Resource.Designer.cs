@@ -76,11 +76,11 @@ namespace BugTracker
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080015
-			public const int addBug = 2131230741;
+			// aapt resource value: 0x7f080016
+			public const int addBug = 2131230742;
 			
-			// aapt resource value: 0x7f080014
-			public const int addProject = 2131230740;
+			// aapt resource value: 0x7f080015
+			public const int addProject = 2131230741;
 			
 			// aapt resource value: 0x7f08000a
 			public const int assigned2 = 2131230730;
@@ -88,11 +88,11 @@ namespace BugTracker
 			// aapt resource value: 0x7f080009
 			public const int assigned2Title = 2131230729;
 			
-			// aapt resource value: 0x7f080012
-			public const int bugsList = 2131230738;
+			// aapt resource value: 0x7f080013
+			public const int bugsList = 2131230739;
 			
-			// aapt resource value: 0x7f080016
-			public const int editPreferences = 2131230742;
+			// aapt resource value: 0x7f080017
+			public const int editPreferences = 2131230743;
 			
 			// aapt resource value: 0x7f080001
 			public const int expectedBehavior = 2131230721;
@@ -104,7 +104,10 @@ namespace BugTracker
 			public const int @fixed = 2131230726;
 			
 			// aapt resource value: 0x7f08000b
-			public const int linearLayout1 = 2131230731;
+			public const int footerLinerLayout = 2131230731;
+			
+			// aapt resource value: 0x7f080011
+			public const int linearLayout1 = 2131230737;
 			
 			// aapt resource value: 0x7f080003
 			public const int observedBehavior = 2131230723;
@@ -130,14 +133,14 @@ namespace BugTracker
 			// aapt resource value: 0x7f08000d
 			public const int projectNameTitle = 2131230733;
 			
-			// aapt resource value: 0x7f080013
-			public const int projectsList = 2131230739;
+			// aapt resource value: 0x7f080014
+			public const int projectsList = 2131230740;
 			
 			// aapt resource value: 0x7f08000c
 			public const int saveBug = 2131230732;
 			
-			// aapt resource value: 0x7f080011
-			public const int saveProject = 2131230737;
+			// aapt resource value: 0x7f080012
+			public const int saveProject = 2131230738;
 			
 			// aapt resource value: 0x7f080005
 			public const int steps2Reproduce = 2131230725;
