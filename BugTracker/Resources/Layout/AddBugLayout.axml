@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:text="@string/ExpectedBehavior"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/expectedBehaviorTitle" />
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/expectedBehavior" />
+    <TextView
+        android:text="@string/ObservedBehavior"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/observedBehaviorTitle" />
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/observedBehavior" />
+    <TextView
+        android:text="@string/Steps2reproduce"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/steps2ReproduceTitle" />
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/steps2Reproduce" />
+    <CheckBox
+        android:text="@string/Fixed"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fixed" />
+    <TextView
+        android:text="@string/Priority"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/priorityTitle" />
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/priority" />
+    <TextView
+        android:text="@string/Assigned2"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/assigned2Title" />
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/assigned2" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:gravity="right">
+        <Button
+            android:text="@string/Save"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/saveBug" />
+    </LinearLayout>
+</LinearLayout>

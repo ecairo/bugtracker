@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Save">Save</string>
+    <string name="ApplicationName">BugTracker</string>
+    <string name="DroidUtils">Hello droid!!</string>
+    <string name="ExpectedBehavior">Expected Behavior</string>
+    <string name="ObservedBehavior">Observed Behavior</string>
+    <string name="Fixed">Fixed</string>
+    <string name="Steps2reproduce">Steps to reproduce</string>
+    <string name="Priority">Priority</string>
+    <string name="Assigned2">Assigned to</string>
+    <string name="editpreferences">Edit Preferences</string>
+    <string name="addProjectTitle">Add Project</string>
+    <string name="addBugTitle">Add Bug</string>
+    <string name="projectName">Project Name</string>
+    <string name="projectDescription">Project Description</string>
+
+    <string-array name="Priorities">
+      <item>Very High</item>
+      <item>High</item>
+      <item>Medium</item>
+      <item>Low</item>
+    </string-array>
+</resources>
