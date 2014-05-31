@@ -41,9 +41,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Data.Sqlite" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -51,7 +53,12 @@
     <Compile Include="AddBugActivity.cs" />
     <Compile Include="AddProjectActivity.cs" />
     <Compile Include="BugListActivity.cs" />
+    <Compile Include="Data\BugModel.cs" />
+    <Compile Include="Data\BugRepository.cs" />
+    <Compile Include="Data\ProjectRepository.cs" />
+    <Compile Include="Data\ProjectModel.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Data\DbConfig.cs" />
     <Compile Include="PreferencesActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
