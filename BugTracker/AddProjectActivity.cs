@@ -48,10 +48,17 @@ namespace BugTracker
             _project.ProjectName = FindViewById<EditText>(Resource.Id.projectName).Text;
             _project.ProjectDescription = FindViewById<EditText>(Resource.Id.projectDescription).Text;
 
-            ProjectRepository.SaveProject(_project);
-
-            Toast.MakeText(this, Resource.String.projectSaved, ToastLength.Long).Show();
-            SetResult(Result.Ok);
+            try
+            {
+                ProjectRepository.SaveProject(_project);
+                Toast.MakeText(this, Resource.String.projectSaved, ToastLength.Long).Show();
+            }
+            catch (Exception exception)
+            {
+                Toast.MakeText(this, exception.Message, ToastLength.Long).Show();
+            }
+            
+            Finish();
         }
 
         protected override void OnPause()

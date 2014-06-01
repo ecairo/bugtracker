@@ -13,10 +13,28 @@ using Android.Widget;
 
 namespace BugTracker.Data
 {
-    public class BugModel
+    public class BugModel : Java.Lang.Object
     {
+        public BugModel(int id, string foundby, string expectedBehavior, string observedBehavior, string steps2Reproduce, bool fix, DateTime found, string priority, string assigned2)
+        {
+            this.Id = id;
+            this.FoundBy = foundby;
+            this.ExpectedBehavior = expectedBehavior;
+            this.ObservedBehavior = observedBehavior;
+            this.Steps2Reproduce = steps2Reproduce;
+            this.Fixed = fix;
+            this.Found = found;
+            this.Assigned2 = assigned2;
+            this.Priority = priority;
+        }
+
+        public BugModel()
+        {
+            
+        }
+
         public int Id { get; set; }
-     
+
         public string FoundBy { get; set; }
 
         public string ExpectedBehavior { get; set; }

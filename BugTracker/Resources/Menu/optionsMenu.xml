@@ -2,8 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
   <item android:id="@+id/addProject" android:title="@string/addProjectTitle"
         android:icon="@android:drawable/ic_menu_add"></item>
-  <item android:id="@+id/addBug" android:title="@string/addBugTitle"
-        android:icon="@android:drawable/ic_menu_add"></item>
   <item android:id="@+id/editPreferences" android:title="@string/editpreferences"
         android:icon="@android:drawable/ic_menu_preferences"></item>
 </menu>

@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Linq;
+
 using Android.App;
 using Android.Content;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+
 using BugTracker.Data;
 
 namespace BugTracker
@@ -50,11 +51,7 @@ namespace BugTracker
                     StartActivity(typeof(PreferencesActivity));
                     break;
                 case Resource.Id.addProject:
-                    AddProjectForResult(0);
-                    //StartActivity(typeof(AddProjectActivity));
-                    break;
-                case Resource.Id.addBug:
-                    StartActivity(typeof(AddBugActivity));
+                    StartAddProject(0, typeof(AddProjectActivity));
                     break;
             }
 
@@ -76,7 +73,7 @@ namespace BugTracker
             switch (item.ItemId)
             {
                 case Resource.Id.editProject:
-                    AddProjectForResult(project.Id);
+                    StartAddProject(project.Id, typeof(AddProjectActivity));
                     break;
 
                 case Resource.Id.deleteProject:
@@ -88,12 +85,12 @@ namespace BugTracker
             return base.OnContextItemSelected(item);
         }
 
-        private void AddProjectForResult(long id)
+        private void StartAddProject(long id, Type activity)
         {
-            var intent = new Intent(this, typeof(AddProjectActivity));
+            var intent = new Intent(this, activity);
             intent.PutExtra("project_id", id);
 
-            StartActivityForResult(intent, 0);
+            StartActivity(intent);
         }
 
         protected override void OnListItemClick(ListView l, View v, int position, long id)
@@ -101,7 +98,7 @@ namespace BugTracker
             var selected = (ProjectModel)ListAdapter.GetItem(position);
 
             // Launch activity to view/edit the currently selected item
-            AddProjectForResult(selected.Id);
+            StartAddProject(selected.Id, typeof(BugListActivity));
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)

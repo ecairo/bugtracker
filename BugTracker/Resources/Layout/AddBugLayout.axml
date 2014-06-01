@@ -40,12 +40,17 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/steps2Reproduce" />
-    <CheckBox
-        android:text="@string/Fixed"
+    <TextView
+        android:text="@string/Assigned2"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/fixed"
+        android:id="@+id/assigned2Title"
         android:layout_marginTop="10dip" />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/assigned2" />
     <TextView
         android:text="@string/Priority"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -57,17 +62,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/priority" />
-    <TextView
-        android:text="@string/Assigned2"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/assigned2Title"
-        android:layout_marginTop="10dip" />
-    <Spinner
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/assigned2" />
     <LinearLayout
         android:orientation="horizontal"
         android:minWidth="25px"

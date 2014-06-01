@@ -76,29 +76,38 @@ namespace BugTracker
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f08001b
-			public const int addBug = 2131230747;
-			
 			// aapt resource value: 0x7f08001a
-			public const int addProject = 2131230746;
+			public const int addBug = 2131230746;
 			
-			// aapt resource value: 0x7f08000a
-			public const int assigned2 = 2131230730;
+			// aapt resource value: 0x7f08001d
+			public const int addProject = 2131230749;
 			
-			// aapt resource value: 0x7f080009
-			public const int assigned2Title = 2131230729;
+			// aapt resource value: 0x7f080007
+			public const int assigned2 = 2131230727;
+			
+			// aapt resource value: 0x7f080006
+			public const int assigned2Title = 2131230726;
 			
 			// aapt resource value: 0x7f080013
-			public const int bugsList = 2131230739;
+			public const int bug_assigned2 = 2131230739;
 			
-			// aapt resource value: 0x7f080019
-			public const int deleteProject = 2131230745;
+			// aapt resource value: 0x7f080012
+			public const int bug_priority = 2131230738;
+			
+			// aapt resource value: 0x7f080015
+			public const int bugsList = 2131230741;
+			
+			// aapt resource value: 0x7f080014
+			public const int bugs_steps2reproduce = 2131230740;
 			
 			// aapt resource value: 0x7f08001c
-			public const int editPreferences = 2131230748;
+			public const int deleteProject = 2131230748;
 			
-			// aapt resource value: 0x7f080018
-			public const int editProject = 2131230744;
+			// aapt resource value: 0x7f08001e
+			public const int editPreferences = 2131230750;
+			
+			// aapt resource value: 0x7f08001b
+			public const int editProject = 2131230747;
 			
 			// aapt resource value: 0x7f080001
 			public const int expectedBehavior = 2131230721;
@@ -106,14 +115,11 @@ namespace BugTracker
 			// aapt resource value: 0x7f080000
 			public const int expectedBehaviorTitle = 2131230720;
 			
-			// aapt resource value: 0x7f080006
-			public const int @fixed = 2131230726;
+			// aapt resource value: 0x7f08000a
+			public const int footerLinerLayout = 2131230730;
 			
-			// aapt resource value: 0x7f08000b
-			public const int footerLinerLayout = 2131230731;
-			
-			// aapt resource value: 0x7f080011
-			public const int linearLayout1 = 2131230737;
+			// aapt resource value: 0x7f080010
+			public const int linearLayout1 = 2131230736;
 			
 			// aapt resource value: 0x7f080003
 			public const int observedBehavior = 2131230723;
@@ -121,41 +127,41 @@ namespace BugTracker
 			// aapt resource value: 0x7f080002
 			public const int observedBehaviorTitle = 2131230722;
 			
+			// aapt resource value: 0x7f080009
+			public const int priority = 2131230729;
+			
 			// aapt resource value: 0x7f080008
-			public const int priority = 2131230728;
-			
-			// aapt resource value: 0x7f080007
-			public const int priorityTitle = 2131230727;
-			
-			// aapt resource value: 0x7f080010
-			public const int projectDescription = 2131230736;
+			public const int priorityTitle = 2131230728;
 			
 			// aapt resource value: 0x7f08000f
-			public const int projectDescriptionTitle = 2131230735;
+			public const int projectDescription = 2131230735;
 			
 			// aapt resource value: 0x7f08000e
-			public const int projectName = 2131230734;
+			public const int projectDescriptionTitle = 2131230734;
 			
 			// aapt resource value: 0x7f08000d
-			public const int projectNameTitle = 2131230733;
-			
-			// aapt resource value: 0x7f080017
-			public const int project_description = 2131230743;
-			
-			// aapt resource value: 0x7f080015
-			public const int project_icon = 2131230741;
-			
-			// aapt resource value: 0x7f080016
-			public const int project_name = 2131230742;
-			
-			// aapt resource value: 0x7f080014
-			public const int projectsList = 2131230740;
+			public const int projectName = 2131230733;
 			
 			// aapt resource value: 0x7f08000c
-			public const int saveBug = 2131230732;
+			public const int projectNameTitle = 2131230732;
 			
-			// aapt resource value: 0x7f080012
-			public const int saveProject = 2131230738;
+			// aapt resource value: 0x7f080019
+			public const int project_description = 2131230745;
+			
+			// aapt resource value: 0x7f080017
+			public const int project_icon = 2131230743;
+			
+			// aapt resource value: 0x7f080018
+			public const int project_name = 2131230744;
+			
+			// aapt resource value: 0x7f080016
+			public const int projectsList = 2131230742;
+			
+			// aapt resource value: 0x7f08000b
+			public const int saveBug = 2131230731;
+			
+			// aapt resource value: 0x7f080011
+			public const int saveProject = 2131230737;
 			
 			// aapt resource value: 0x7f080005
 			public const int steps2Reproduce = 2131230725;
@@ -183,13 +189,16 @@ namespace BugTracker
 			public const int AddProjectLayout = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int BugsList = 2130903042;
+			public const int BugListRow = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int Main = 2130903043;
+			public const int BugsList = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int ProjectListRow = 2130903044;
+			public const int Main = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int ProjectListRow = 2130903045;
 			
 			static Layout()
 			{
@@ -205,10 +214,13 @@ namespace BugTracker
 		{
 			
 			// aapt resource value: 0x7f070000
-			public const int contextMenu = 2131165184;
+			public const int bugsOptionsMenu = 2131165184;
 			
 			// aapt resource value: 0x7f070001
-			public const int optionsMenu = 2131165185;
+			public const int contextMenu = 2131165185;
+			
+			// aapt resource value: 0x7f070002
+			public const int optionsMenu = 2131165186;
 			
 			static Menu()
 			{
