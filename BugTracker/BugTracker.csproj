@@ -88,7 +88,9 @@
     <AndroidResource Include="Resources\Layout\Main.axml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Values\Strings.xml" />
+    <AndroidResource Include="Resources\Values\Strings.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\Icon.png" />
@@ -99,7 +101,9 @@
     </Content>
     <AndroidResource Include="Resources\Xml\Preferences.xml" />
     <AndroidResource Include="Resources\Menu\optionsMenu.xml" />
-    <AndroidResource Include="Resources\Menu\contextMenu.xml" />
+    <AndroidResource Include="Resources\Menu\contextMenu.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\Menu\bugsOptionsMenu.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

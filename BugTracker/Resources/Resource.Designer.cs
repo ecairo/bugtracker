@@ -268,6 +268,9 @@ namespace BugTracker
 			// aapt resource value: 0x7f05000a
 			public const int addProjectTitle = 2131034122;
 			
+			// aapt resource value: 0x7f050011
+			public const int bugSaved = 2131034129;
+			
 			// aapt resource value: 0x7f05000f
 			public const int deleteProject = 2131034127;
 			

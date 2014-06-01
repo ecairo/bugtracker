@@ -3,7 +3,9 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:padding="5dip">
+    android:padding="5dip"
+    android:scrollbars="vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
     <TextView
         android:text="@string/ExpectedBehavior"
         android:textAppearance="?android:attr/textAppearanceMedium"

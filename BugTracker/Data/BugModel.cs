@@ -15,7 +15,7 @@ namespace BugTracker.Data
 {
     public class BugModel : Java.Lang.Object
     {
-        public BugModel(int id, string foundby, string expectedBehavior, string observedBehavior, string steps2Reproduce, bool fix, DateTime found, string priority, string assigned2)
+        public BugModel(long id, string foundby, string expectedBehavior, string observedBehavior, string steps2Reproduce, bool fix, DateTime found, string priority, string assigned2, long project)
         {
             this.Id = id;
             this.FoundBy = foundby;
@@ -26,14 +26,21 @@ namespace BugTracker.Data
             this.Found = found;
             this.Assigned2 = assigned2;
             this.Priority = priority;
+            this.Project = project;
         }
 
         public BugModel()
         {
+            this.Id = 0;
+        }
+
+        public BugModel(long id, string foundBy, string expectedBehavior, string observedBehavior, string steps2Reproduce, DateTime found, string priority, string assigned2, long project)
+            :this(id, foundBy, expectedBehavior, observedBehavior, steps2Reproduce, false, found, priority, assigned2, project)
+        {
             
         }
 
-        public int Id { get; set; }
+        public long Id { get; set; }
 
         public string FoundBy { get; set; }
 
@@ -50,5 +57,8 @@ namespace BugTracker.Data
         public bool Fixed { get; set; }
 
         public DateTime Found { get; set; }
+        
+        public long Project { get; set; }
+
     }
 }

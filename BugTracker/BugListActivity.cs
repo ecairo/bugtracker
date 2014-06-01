@@ -22,9 +22,7 @@ namespace BugTracker
         {
             base.OnCreate(bundle);
 
-            var projectId = Intent.GetLongExtra("project_id", 0);
-
-            _projectId = projectId;
+            _projectId = Intent.GetLongExtra("project_id", 0);
 
             PopulateList();
         }
@@ -48,12 +46,21 @@ namespace BugTracker
             switch (item.ItemId)
             {
                 case Resource.Id.addBug:
-                    StartActivity(typeof(AddBugActivity));
+                    var intent = new Intent(this, typeof(AddBugActivity));
+                    intent.PutExtra("project_id", _projectId);
+
+                    StartActivity(intent);
                     break;
             }
 
             return base.OnOptionsItemSelected(item);
         }
 
+        protected override void OnResume()
+        {
+            base.OnResume();
+
+            PopulateList();
+        }
     }
 }
