@@ -98,5 +98,23 @@ namespace BugTracker.Data
                 }
             }
 	    }
+
+	    public static long GetProjectBugs(long id)
+	    {
+            const string sql = "SELECT COUNT() FROM Bugs WHERE Project = @Id";
+
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = sql;
+                    cmd.Parameters.AddWithValue("@Id", id);
+
+                    return (long) cmd.ExecuteScalar();
+                }
+            }
+	    }
 	}
 }

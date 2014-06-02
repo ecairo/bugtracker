@@ -1,5 +1,7 @@
-﻿using Android.App;
+﻿using System.Globalization;
+using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.Widget;
 using BugTracker.Data;
 using Java.Lang;
@@ -27,8 +29,33 @@ namespace BugTracker
 
             if (view != null)
             {
-                view.FindViewById<TextView>(Resource.Id.project_name).Text = Left(item.ProjectName, 30);
-                view.FindViewById<TextView>(Resource.Id.project_description).Text = Left(item.ProjectDescription, 70);
+                var projectHeaderView = view.FindViewById<TextView>(Resource.Id.project_name);
+                projectHeaderView.Text = Left(item.ProjectName, 30);
+
+                view.FindViewById<TextView>(Resource.Id.project_description).Text = Left(item.ProjectDescription, 150);
+
+                var projectBugs = item.Bugs;
+                var projectBugsView = view.FindViewById<TextView>(Resource.Id.project_bugs);
+                var projectColor = Color.LightGreen;
+
+                projectBugsView.Text = projectBugs == 0
+                    ? ""
+                    : projectBugs.ToString(CultureInfo.InvariantCulture);
+
+                if (projectBugs > 0 && projectBugs <= 10)
+                {
+                    projectColor = Color.Orange;
+                }else if (projectBugs > 10 && projectBugs <= 20)
+                {
+                    projectColor = Color.OrangeRed;
+                }
+                else if(projectBugs > 20)
+                {
+                    projectColor = Color.Red;
+                }
+
+                projectBugsView.SetTextColor(projectColor);
+                projectHeaderView.SetTextColor(projectColor);
 
                 return view;
             }

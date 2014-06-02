@@ -21,6 +21,7 @@ namespace BugTracker
         private ProjectModel _project;
         private EditText _projectNameView;
         private EditText _projectDescriptionView;
+        private const int ALERT_SAVE_DIALOG = 0;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -46,12 +47,19 @@ namespace BugTracker
         void buttonSave_Click(object sender, EventArgs e)
         {
             _project.ProjectName = FindViewById<EditText>(Resource.Id.projectName).Text;
+
+            if (string.IsNullOrEmpty(_project.ProjectName))
+            {
+                ShowDialog(ALERT_SAVE_DIALOG);
+                return;
+            }
+
             _project.ProjectDescription = FindViewById<EditText>(Resource.Id.projectDescription).Text;
 
             try
             {
                 ProjectRepository.SaveProject(_project);
-                Toast.MakeText(this, Resource.String.projectSaved, ToastLength.Long).Show();
+                Toast.MakeText(this, Resource.String.projectSaved, ToastLength.Short).Show();
             }
             catch (Exception exception)
             {
@@ -59,6 +67,22 @@ namespace BugTracker
             }
             
             Finish();
+        }
+
+        protected override Dialog OnCreateDialog(int id)
+        {
+            // TODO: Move strings to strings.xml
+            switch (id)
+            {
+                case ALERT_SAVE_DIALOG:
+                    var dialogBuilder = new AlertDialog.Builder(this);
+                    return dialogBuilder.SetTitle("Attention")
+                        .SetMessage("Project must have a Name")
+                        .SetPositiveButton("OK", (sender, args) => {})
+                        .Create();
+            }
+
+            return null;
         }
     }
 }

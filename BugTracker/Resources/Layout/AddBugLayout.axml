@@ -6,9 +6,7 @@
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:padding="5dip"
-        android:scrollbars="vertical"
-        android:scrollbarAlwaysDrawVerticalTrack="true">
+        android:padding="5dip">
         <TextView
             android:text="@string/ExpectedBehavior"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -74,7 +72,8 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/footerLinerLayout"
-            android:gravity="right">
+            android:gravity="center"
+            android:layout_marginTop="15dip">
             <Button
                 android:text="@string/Save"
                 android:layout_width="wrap_content"

@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.Widget;
 using BugTracker.Data;
 using Java.Lang;
@@ -25,11 +26,31 @@ namespace BugTracker
             // This gives us some performance gains by not always inflating a new view
             var view = (convertView ?? _activity.LayoutInflater.Inflate(Resource.Layout.BugListRow, parent, false)) as LinearLayout;
 
+            var bugTextColor = Color.DarkSalmon;
             if (view != null)
             {
-                view.FindViewById<TextView>(Resource.Id.bug_priority).Text = item.Priority;
-                view.FindViewById<TextView>(Resource.Id.bug_assigned2).Text = Left(item.Assigned2, 30);
-                view.FindViewById<TextView>(Resource.Id.bugs_steps2reproduce).Text = Left(item.Steps2Reproduce, 70);
+                switch (item.Priority)
+                {
+                    case "Very High":
+                        bugTextColor = Color.Red;
+                        break;
+                    case "High":
+                        bugTextColor = Color.OrangeRed;
+                        break;
+                    case "Medium":
+                        bugTextColor = Color.Orange;
+                        break;
+                    default:
+                        break;
+                }
+                var header = view.FindViewById<TextView>(Resource.Id.bug_header);
+                header.Text = string.Format("BR-{0}, assigned to: {1}", item.Id, item.Assigned2);
+                header.SetTextColor(bugTextColor);
+
+                var description = view.FindViewById<TextView>(Resource.Id.bugs_description);
+                description.Text = Left(item.ObservedBehavior, 255);
+                description.SetTextColor(bugTextColor);
+                
 
                 return view;
             }

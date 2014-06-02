@@ -76,11 +76,11 @@ namespace BugTracker
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f08001a
-			public const int addBug = 2131230746;
+			// aapt resource value: 0x7f08001b
+			public const int addBug = 2131230747;
 			
-			// aapt resource value: 0x7f08001d
-			public const int addProject = 2131230749;
+			// aapt resource value: 0x7f08001e
+			public const int addProject = 2131230750;
 			
 			// aapt resource value: 0x7f080007
 			public const int assigned2 = 2131230727;
@@ -89,25 +89,25 @@ namespace BugTracker
 			public const int assigned2Title = 2131230726;
 			
 			// aapt resource value: 0x7f080013
-			public const int bug_assigned2 = 2131230739;
+			public const int bug_header = 2131230739;
 			
 			// aapt resource value: 0x7f080012
-			public const int bug_priority = 2131230738;
+			public const int bug_row = 2131230738;
 			
 			// aapt resource value: 0x7f080015
 			public const int bugsList = 2131230741;
 			
 			// aapt resource value: 0x7f080014
-			public const int bugs_steps2reproduce = 2131230740;
+			public const int bugs_description = 2131230740;
+			
+			// aapt resource value: 0x7f08001d
+			public const int deleteProject = 2131230749;
+			
+			// aapt resource value: 0x7f08001f
+			public const int editPreferences = 2131230751;
 			
 			// aapt resource value: 0x7f08001c
-			public const int deleteProject = 2131230748;
-			
-			// aapt resource value: 0x7f08001e
-			public const int editPreferences = 2131230750;
-			
-			// aapt resource value: 0x7f08001b
-			public const int editProject = 2131230747;
+			public const int editProject = 2131230748;
 			
 			// aapt resource value: 0x7f080001
 			public const int expectedBehavior = 2131230721;
@@ -146,7 +146,10 @@ namespace BugTracker
 			public const int projectNameTitle = 2131230732;
 			
 			// aapt resource value: 0x7f080019
-			public const int project_description = 2131230745;
+			public const int project_bugs = 2131230745;
+			
+			// aapt resource value: 0x7f08001a
+			public const int project_description = 2131230746;
 			
 			// aapt resource value: 0x7f080017
 			public const int project_icon = 2131230743;

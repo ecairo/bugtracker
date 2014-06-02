@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:padding="5dip">
+    android:layout_height="fill_parent">
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:padding="5dip">
     <TextView
         android:text="@string/projectName"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -34,11 +37,13 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout1"
-        android:gravity="right">
-        <Button
-            android:text="@string/Save"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:id="@+id/saveProject" />
+        android:gravity="center"
+        android:layout_marginTop="15dip">
+      <Button
+          android:text="@string/Save"
+          android:layout_width="wrap_content"
+          android:layout_height="fill_parent"
+          android:id="@+id/saveProject" />
     </LinearLayout>
-</LinearLayout>
+  </LinearLayout>
+</ScrollView>

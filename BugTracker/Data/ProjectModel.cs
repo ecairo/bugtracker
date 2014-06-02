@@ -35,5 +35,13 @@ namespace BugTracker.Data
         public string ProjectName { get; set; }
 
         public string ProjectDescription { get; set; }
+
+        public long Bugs
+        {
+            get
+            {
+                return ProjectRepository.GetProjectBugs(this.Id);
+            }
+        }
     }
 }
