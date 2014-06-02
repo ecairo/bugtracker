@@ -34,7 +34,7 @@ namespace BugTracker.Data
         private static BugModel NewBugFromReader(SqliteDataReader reader)
         {
             return new BugModel(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), 
-                                reader.GetDateTime(6), reader.GetString(7), reader.GetString(8), reader.GetInt32(9));
+                                reader.GetBoolean(5), reader.GetDateTime(6), reader.GetString(7), reader.GetString(8), reader.GetInt32(9));
         }
 
 	    public static void Save(BugModel bug)
@@ -49,8 +49,8 @@ namespace BugTracker.Data
                     if (bug.Id == 0)
                     {
                         // Do an insert
-                        cmd.CommandText = "INSERT INTO [Bugs] ([ExpectedBehavior], [ObservedBehavior], [Steps2Reproduce], [Found], [FoundBy], [Priority], [Assigned2], [Project])" + 
-                                          "VALUES (@expectedB, @observedB, @steps, @found, @foundBy, @priority, @assigned2, @project); SELECT last_insert_rowid();";
+                        cmd.CommandText = "INSERT INTO [Bugs] ([ExpectedBehavior], [ObservedBehavior], [Steps2Reproduce], [Found], [FoundBy], [Priority], [Assigned2], [Project], [Fixed])" + 
+                                          "VALUES (@expectedB, @observedB, @steps, @found, @foundBy, @priority, @assigned2, @project, @fixed); SELECT last_insert_rowid();";
                         cmd.Parameters.AddWithValue("@expectedB", bug.ExpectedBehavior);
                         cmd.Parameters.AddWithValue("@observedB", bug.ObservedBehavior);
                         cmd.Parameters.AddWithValue("@steps", bug.Steps2Reproduce);
@@ -59,22 +59,51 @@ namespace BugTracker.Data
                         cmd.Parameters.AddWithValue("@priority", bug.Priority);
                         cmd.Parameters.AddWithValue("@assigned2", bug.Assigned2);
                         cmd.Parameters.AddWithValue("@project", bug.Project);
+                        cmd.Parameters.AddWithValue("@fixed", false);
 
                         bug.Id = (long)cmd.ExecuteScalar();
-                    }
-                    else
-                    {
-                        // Do an update
-                        //cmd.CommandText = "UPDATE [bugs] SET [bugName] = @bugName, [bugDescription] = @bugDescription WHERE Id = @Id";
-                        //cmd.Parameters.AddWithValue("@Id", bug.Id);
-                        //cmd.Parameters.AddWithValue("@bugName", bug.bugName);
-                        //cmd.Parameters.AddWithValue("@bugDescription", bug.bugDescription);
-
-                        //cmd.ExecuteNonQuery();
                     }
                 }
             }
 	        
+	    }
+
+	    public static BugModel GetBug(long bugId)
+	    {
+            var sql = string.Format("SELECT * FROM Bugs WHERE Id = {0};", bugId);
+
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = sql;
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        return reader.Read() ? NewBugFromReader(reader) : null;
+                    }
+                }
+            }	        
+	    }
+
+	    public static void MarkAsFixed(long id, bool fix = true)
+	    {
+	        using (var conn = GetConnection())
+	        {
+	            conn.Open();
+
+	            using (var cmd = conn.CreateCommand())
+	            {
+	                // Do an update
+	                cmd.CommandText = "UPDATE [Bugs] SET [Fixed] = @fixed WHERE Id = @Id";
+	                cmd.Parameters.AddWithValue("@Id", id);
+	                cmd.Parameters.AddWithValue("@fixed", fix);
+
+	                cmd.ExecuteNonQuery();
+	            }
+	        }
 	    }
 	}
 }

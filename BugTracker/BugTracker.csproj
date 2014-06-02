@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="AddBugActivity.cs" />
     <Compile Include="AddProjectActivity.cs" />
+    <Compile Include="BugDetails.cs" />
     <Compile Include="BugListActivity.cs" />
     <Compile Include="BugAdapter.cs" />
     <Compile Include="Data\BugModel.cs" />
@@ -83,6 +84,9 @@
     <AndroidResource Include="Resources\Layout\BugListRow.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\Layout\BugDetailsLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Layout\Main.axml" />
@@ -105,6 +109,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\Menu\bugsOptionsMenu.xml" />
+    <AndroidResource Include="Resources\Menu\bugsContextMenu.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

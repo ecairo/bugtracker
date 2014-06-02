@@ -2,7 +2,7 @@
 <resources>
     <string name="Save">Save</string>
     <string name="ApplicationName">BugTracker</string>
-    <string name="DroidUtils">Hello droid!!</string>
+    <string name="manager">Manager</string>
     <string name="ExpectedBehavior">Expected Behavior</string>
     <string name="ObservedBehavior">Observed Behavior</string>
     <string name="Fixed">Fixed</string>
@@ -18,6 +18,8 @@
     <string name="deleteProject">Delete Project</string>
     <string name="projectSaved">Project Saved!</string>
     <string name="bugSaved">Bug Saved!</string>
+    <string name="markAsFixed">Mark as Fixed</string>
+    <string name="found">Found</string>
 
     <string-array name="Priorities">
       <item>Very High</item>

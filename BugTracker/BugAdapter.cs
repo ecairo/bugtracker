@@ -26,23 +26,25 @@ namespace BugTracker
             // This gives us some performance gains by not always inflating a new view
             var view = (convertView ?? _activity.LayoutInflater.Inflate(Resource.Layout.BugListRow, parent, false)) as LinearLayout;
 
-            var bugTextColor = Color.DarkSalmon;
+            var bugTextColor = item.Fixed ? Color.LightGreen : Color.DarkSalmon;
             if (view != null)
             {
-                switch (item.Priority)
+                if (!item.Fixed)
                 {
-                    case "Very High":
-                        bugTextColor = Color.Red;
-                        break;
-                    case "High":
-                        bugTextColor = Color.OrangeRed;
-                        break;
-                    case "Medium":
-                        bugTextColor = Color.Orange;
-                        break;
-                    default:
-                        break;
+                    switch (item.Priority)
+                    {
+                        case "Very High":
+                            bugTextColor = Color.Red;
+                            break;
+                        case "High":
+                            bugTextColor = Color.OrangeRed;
+                            break;
+                        case "Medium":
+                            bugTextColor = Color.Orange;
+                            break;
+                    }
                 }
+
                 var header = view.FindViewById<TextView>(Resource.Id.bug_header);
                 header.Text = string.Format("BR-{0}, assigned to: {1}", item.Id, item.Assigned2);
                 header.SetTextColor(bugTextColor);
@@ -50,7 +52,6 @@ namespace BugTracker
                 var description = view.FindViewById<TextView>(Resource.Id.bugs_description);
                 description.Text = Left(item.ObservedBehavior, 255);
                 description.SetTextColor(bugTextColor);
-                
 
                 return view;
             }

@@ -76,41 +76,47 @@ namespace BugTracker
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f08001b
-			public const int addBug = 2131230747;
+			// aapt resource value: 0x7f080023
+			public const int addBug = 2131230755;
 			
-			// aapt resource value: 0x7f08001e
-			public const int addProject = 2131230750;
+			// aapt resource value: 0x7f080026
+			public const int addProject = 2131230758;
 			
 			// aapt resource value: 0x7f080007
 			public const int assigned2 = 2131230727;
 			
+			// aapt resource value: 0x7f080015
+			public const int assigned2Details = 2131230741;
+			
 			// aapt resource value: 0x7f080006
 			public const int assigned2Title = 2131230726;
 			
-			// aapt resource value: 0x7f080013
-			public const int bug_header = 2131230739;
+			// aapt resource value: 0x7f08001a
+			public const int bug_header = 2131230746;
 			
-			// aapt resource value: 0x7f080012
-			public const int bug_row = 2131230738;
-			
-			// aapt resource value: 0x7f080015
-			public const int bugsList = 2131230741;
-			
-			// aapt resource value: 0x7f080014
-			public const int bugs_description = 2131230740;
-			
-			// aapt resource value: 0x7f08001d
-			public const int deleteProject = 2131230749;
-			
-			// aapt resource value: 0x7f08001f
-			public const int editPreferences = 2131230751;
+			// aapt resource value: 0x7f080019
+			public const int bug_row = 2131230745;
 			
 			// aapt resource value: 0x7f08001c
-			public const int editProject = 2131230748;
+			public const int bugsList = 2131230748;
+			
+			// aapt resource value: 0x7f08001b
+			public const int bugs_description = 2131230747;
+			
+			// aapt resource value: 0x7f080025
+			public const int deleteProject = 2131230757;
+			
+			// aapt resource value: 0x7f080027
+			public const int editPreferences = 2131230759;
+			
+			// aapt resource value: 0x7f080024
+			public const int editProject = 2131230756;
 			
 			// aapt resource value: 0x7f080001
 			public const int expectedBehavior = 2131230721;
+			
+			// aapt resource value: 0x7f080012
+			public const int expectedBehaviorDetails = 2131230738;
 			
 			// aapt resource value: 0x7f080000
 			public const int expectedBehaviorTitle = 2131230720;
@@ -118,17 +124,32 @@ namespace BugTracker
 			// aapt resource value: 0x7f08000a
 			public const int footerLinerLayout = 2131230730;
 			
+			// aapt resource value: 0x7f080018
+			public const int foundDetails = 2131230744;
+			
 			// aapt resource value: 0x7f080010
 			public const int linearLayout1 = 2131230736;
 			
+			// aapt resource value: 0x7f080017
+			public const int managerDetails = 2131230743;
+			
+			// aapt resource value: 0x7f080022
+			public const int markFixedBug = 2131230754;
+			
 			// aapt resource value: 0x7f080003
 			public const int observedBehavior = 2131230723;
+			
+			// aapt resource value: 0x7f080013
+			public const int observedBehaviorDetails = 2131230739;
 			
 			// aapt resource value: 0x7f080002
 			public const int observedBehaviorTitle = 2131230722;
 			
 			// aapt resource value: 0x7f080009
 			public const int priority = 2131230729;
+			
+			// aapt resource value: 0x7f080016
+			public const int priorityDetails = 2131230742;
 			
 			// aapt resource value: 0x7f080008
 			public const int priorityTitle = 2131230728;
@@ -145,20 +166,20 @@ namespace BugTracker
 			// aapt resource value: 0x7f08000c
 			public const int projectNameTitle = 2131230732;
 			
-			// aapt resource value: 0x7f080019
-			public const int project_bugs = 2131230745;
+			// aapt resource value: 0x7f080020
+			public const int project_bugs = 2131230752;
 			
-			// aapt resource value: 0x7f08001a
-			public const int project_description = 2131230746;
+			// aapt resource value: 0x7f080021
+			public const int project_description = 2131230753;
 			
-			// aapt resource value: 0x7f080017
-			public const int project_icon = 2131230743;
+			// aapt resource value: 0x7f08001e
+			public const int project_icon = 2131230750;
 			
-			// aapt resource value: 0x7f080018
-			public const int project_name = 2131230744;
+			// aapt resource value: 0x7f08001f
+			public const int project_name = 2131230751;
 			
-			// aapt resource value: 0x7f080016
-			public const int projectsList = 2131230742;
+			// aapt resource value: 0x7f08001d
+			public const int projectsList = 2131230749;
 			
 			// aapt resource value: 0x7f08000b
 			public const int saveBug = 2131230731;
@@ -168,6 +189,9 @@ namespace BugTracker
 			
 			// aapt resource value: 0x7f080005
 			public const int steps2Reproduce = 2131230725;
+			
+			// aapt resource value: 0x7f080014
+			public const int steps2ReproduceDetails = 2131230740;
 			
 			// aapt resource value: 0x7f080004
 			public const int steps2ReproduceTitle = 2131230724;
@@ -192,16 +216,19 @@ namespace BugTracker
 			public const int AddProjectLayout = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int BugListRow = 2130903042;
+			public const int BugDetailsLayout = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int BugsList = 2130903043;
+			public const int BugListRow = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int Main = 2130903044;
+			public const int BugsList = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int ProjectListRow = 2130903045;
+			public const int Main = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int ProjectListRow = 2130903046;
 			
 			static Layout()
 			{
@@ -217,13 +244,16 @@ namespace BugTracker
 		{
 			
 			// aapt resource value: 0x7f070000
-			public const int bugsOptionsMenu = 2131165184;
+			public const int bugsContextMenu = 2131165184;
 			
 			// aapt resource value: 0x7f070001
-			public const int contextMenu = 2131165185;
+			public const int bugsOptionsMenu = 2131165185;
 			
 			// aapt resource value: 0x7f070002
-			public const int optionsMenu = 2131165186;
+			public const int contextMenu = 2131165186;
+			
+			// aapt resource value: 0x7f070003
+			public const int optionsMenu = 2131165187;
 			
 			static Menu()
 			{
@@ -243,9 +273,6 @@ namespace BugTracker
 			
 			// aapt resource value: 0x7f050008
 			public const int Assigned2 = 2131034120;
-			
-			// aapt resource value: 0x7f050002
-			public const int DroidUtils = 2131034114;
 			
 			// aapt resource value: 0x7f050003
 			public const int ExpectedBehavior = 2131034115;
@@ -282,6 +309,15 @@ namespace BugTracker
 			
 			// aapt resource value: 0x7f050009
 			public const int editpreferences = 2131034121;
+			
+			// aapt resource value: 0x7f050013
+			public const int found = 2131034131;
+			
+			// aapt resource value: 0x7f050002
+			public const int manager = 2131034114;
+			
+			// aapt resource value: 0x7f050012
+			public const int markAsFixed = 2131034130;
 			
 			// aapt resource value: 0x7f05000d
 			public const int projectDescription = 2131034125;

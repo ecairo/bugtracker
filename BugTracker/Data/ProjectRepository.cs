@@ -101,7 +101,7 @@ namespace BugTracker.Data
 
 	    public static long GetProjectBugs(long id)
 	    {
-            const string sql = "SELECT COUNT() FROM Bugs WHERE Project = @Id";
+            const string sql = "SELECT COUNT() FROM Bugs WHERE Project = @Id AND Fixed = 0";
 
             using (var conn = GetConnection())
             {
