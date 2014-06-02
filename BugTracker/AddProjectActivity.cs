@@ -60,18 +60,5 @@ namespace BugTracker
             
             Finish();
         }
-
-        protected override void OnPause()
-        {
-            base.OnPause();
-
-            // If this was a new project and no title was added, don't save it
-            if (IsFinishing && _project.Id == 0 && _projectNameView.Text.Length == 0)
-                return;
-
-            _project.ProjectName = _projectNameView.Text;
-            _project.ProjectDescription = _projectDescriptionView.Text;
-            ProjectRepository.SaveProject(_project);
-        }
     }
 }

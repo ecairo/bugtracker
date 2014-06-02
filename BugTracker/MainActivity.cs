@@ -14,6 +14,9 @@ namespace BugTracker
     [Activity(Label = "BugTracker", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : ListActivity
     {
+        private long _selectedProject;
+        private const int ALERT_DELETE_DIALOG = 0;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -24,13 +27,12 @@ namespace BugTracker
             ListView.SetOnCreateContextMenuListener(this);
 
             PopulateList();
-
-            // Set our view from the "main" layout resource
-            //SetContentView(Resource.Layout.Main);
         }
 
         private void PopulateList()
         {
+            _selectedProject = 0;
+
             var projects = ProjectRepository.GetAllProjects();
             var adapter = new ProjectAdapter(this, this, Resource.Layout.ProjectListRow, projects.ToArray());
             ListAdapter = adapter;
@@ -77,12 +79,35 @@ namespace BugTracker
                     break;
 
                 case Resource.Id.deleteProject:
-                    ProjectRepository.Delete(project.Id);
-                    PopulateList();
+                    _selectedProject = project.Id;
+                    ShowDialog(ALERT_DELETE_DIALOG);
                     break;
             }
             
             return base.OnContextItemSelected(item);
+        }
+
+        protected override Dialog OnCreateDialog(int id)
+        {
+            // TODO: Move strings to strings.xml
+            switch (id)
+            {
+                case ALERT_DELETE_DIALOG:
+                    var dialogBuilder = new AlertDialog.Builder(this);
+                    return dialogBuilder.SetTitle("Delete?")
+                        .SetMessage("Are you sure you want to delete?")
+                        .SetCancelable(false)
+                        .SetPositiveButton("Yes", (sender, args) =>
+                        {
+                            ProjectRepository.Delete(_selectedProject);
+                            
+                            PopulateList();
+                        })
+                        .SetNegativeButton("No", (sender, args) => { })
+                        .Create();
+            }
+
+            return null;
         }
 
         private void StartAddProject(long id, Type activity)
